@@ -21,7 +21,7 @@ I chose to try and tackle the problem of creating unique "timers" that don't pro
 
 The mountainscape darkens and populates the sky with stars.\
 The cityscape builds on itself.\
-The jellyfish populate and glow.\
+The jellyfish populate and glow.
 
 The placement of the stars/buildings/jellyfish is determined at random based on screen dimension.\
 The stars/buildings/jellyfish per amount of time and the time itself can be adjusted in the code and is made short for demo purposes. 
