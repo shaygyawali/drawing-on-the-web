@@ -1,5 +1,4 @@
-# Compilation of Drawing on the Web Projects 🎨
-## Experimental HTML, CSS, and Javascript animations and graphics, sometimes manipulated by data*
+# 🎨 Compilation of Drawing on the Web Projects 🎨
 
 ### Overview of projects:
 
