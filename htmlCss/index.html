@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Grid Exercise</title>
+
+    <style>
+      * {margin: 0;}
+
+      body{
+            background-image: url('bm2.png');
+              /* Full height */
+            height: 100%;
+            width: 100%;
+
+            /* Center and scale the image nicely */
+            background-repeat: repeat;
+            background-size:cover;
+            z-index: 0;
+      }
+
+      audio{
+        position: absolute;
+        opacity: 10%;
+        z-index: 7;
+      }
+
+      video{
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        height: 100%;
+        object-fit: cover;
+        opacity: 30%;
+        mix-blend-mode:luminosity;
+      }
+
+      .jfHolder{
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        align-content: space-between;
+        mix-blend-mode: color-dodge;
+        opacity: 100%;
+      }
+
+
+      .a{
+        transform: rotate(180deg);
+      }
+
+      .b{
+        -webkit-transform: scaleY(-1);
+        transform: scaleY(-1);
+      }
+
+      .c{
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+      }
+
+      .a, .b{
+        mix-blend-mode: lighten;
+      }
+
+      .c, .d{
+        mix-blend-mode:color-dodge;
+      }
+
+      .spongeHolder{
+        background-color: white;
+        position: absolute;
+        z-index: 6;
+        height: 100vh;
+        width: 100%;
+        border: 1px solid pink;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .sponge{
+        width: 700px;
+        opacity: 90%;
+      }
+
+      button{
+        background-color: white;
+        color: black;
+        font-size: 30px;
+        border-radius: 20px;
+        border: none;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border: 1px solid black
+
+      }
+
+      button:hover{
+        color: white;
+        background-color: black;
+      }
+
+      .loops{
+        background-image: url('blobs.gif');
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        z-index: 3;
+        background-size: cover;
+        opacity: 7%;
+        mix-blend-mode:color-dodge;
+      }
+
+
+      .loops2{
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	    background-size: 400% 400%;
+	    animation: gradient 15s ease infinite;        
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        z-index: 5;
+        background-size: cover;
+        opacity: 20%;
+      }
+
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+
+      
+
+
+
+
+
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+        <audio controls autoplay id="audio">
+            <source id= "audioSrc" src="spongeTrap.mp3" type="audio/mp3">
+        </audio>
+
+        <video autoplay muted loop>
+            <source src="water.mp4" type="video/mp4">
+          </video>
+          <div class="jfHolder">
+            <img class="a"src="jelly-fish.gif" alt="this slowpoke moves"  width="250" />
+            <img class="b" class="e" src="jelly-fish.gif" alt="this slowpoke moves"  width="250" />
+            <img class="c"src="jelly-fish.gif" alt="this slowpoke moves"  width="250" />
+            <img class="d"src="jelly-fish.gif" alt="this slowpoke moves"  width="250" />
+
+          </div>
+
+          <div class="spongeHolder" id="sh">
+            <img class="sponge" src="spongeDance.gif" id="sp"/>
+          </div>
+
+          <div class = "loops">
+        </div>
+        <div class = "loops2">
+        </div>
+    </div>
+    <script src="index.js"></script>
+
+
+  </body>
+</html>

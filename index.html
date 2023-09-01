@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Grid Exercise</title>
+
+    <style>
+      * {margin: 0;}
+      
+      
+      @font-face {
+        font-family: 'stretchPro';
+        src: url('./StretchPro.otf');
+
+      }
+
+      .grid{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        /*border: 1px solid black;*/
+      }
+
+      .a{
+        grid-column: 1/5;
+        grid-row: 4/5;
+        background-color: #FF0FF0;
+        z-index: 1;
+      }
+
+      .b{
+        grid-column: 2/4;
+        grid-row: 2/4;
+        display: flex;
+        align-items: center;
+        font-family: 'stretchPro';
+        font-size: 35px;
+        z-index: 2;
+      }
+
+      .b h1{
+        color: blue;
+        margin-right: 15px;
+      }
+
+      .c{
+        grid-column: 2/3;
+        grid-row: 4;
+        z-index: 5;
+        
+      }
+
+      .c h2{
+        font-family: 'stretchPro';
+        color: white;
+        font-size: 30px;
+      }
+
+      .d{
+        grid-column: 4/6;
+        grid-row: 4/6;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+      }
+
+      ul li{
+        list-style-type: none;
+        font-family: 'stretchPro';
+        font-weight: bolder;
+      }
+
+      a:link{
+        text-decoration: none;
+      }
+      a:visited{
+        color: blue;
+      }
+      a:hover{
+        color: black;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="grid">
+      <div class="a"></div>
+      <div class="b"><h1>DDrawing on the Web</h1></div>
+      <div class="c"><h2>shay gyyyawali</h2></div>
+
+      <div class="d">
+        <ul>
+          <li><a href="./htmlCSS/index.html">HTML and CSS</a></li>
+          <li><a href="./cssAnimation/index.html">CSS Animation</a></li>
+          <li><a href="./javascript/index.html">JavaScript</a></li>
+          <li><a href="./webAPI/index.html">Web APIs</a></li>
+          <li><a href="./htmlCanvasAnimation/index.html">HTML Canvas</a></li>
+          <li><a href="./htmlCss.html">WebGL</a></li>
+          <li><a href="./finalProj/index.html">Final Project</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

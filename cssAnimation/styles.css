@@ -1,0 +1,124 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    background-image: url('background.jpg');
+    background-position: center;
+    background-size:cover;
+}
+div{
+    transform-style: preserve-3d;
+    perspective: 1200px;
+    animation: rotateAnimation 5s linear infinite;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.center{
+    width: 200px;
+    height: auto;
+    transform-origin: center;
+    transform: rotateX(80deg) translateX(0px) translateY(0px) translateZ(0px);
+}
+    
+.p1{
+    position: absolute;
+    width: 250px;
+    transform-origin: bottom;
+    transform: translateX(0px) translateY(-140px) translateZ(-80px) rotateX(50deg);
+
+}
+.p2{
+    position: absolute;
+    width: 250px;
+    transform-origin: bottom left;
+    transform: translateX(90px) translateY(-140px) translateZ(-80px) rotateX(80deg) rotate(0.165turn) translateX(-35px) translateY(-70px) rotateX(-30deg);
+}
+.p3{
+    position: absolute;
+    width: 250px;
+    transform-origin: bottom left;
+    transform: rotateX(80deg) translateZ(100px) translateX(200px) translateY(-40px) rotate(0.33turn) translateY(-35px) translateX(-60px) rotateX(-30deg) ;
+}
+.p4{
+    position: absolute;
+    width: 250px;
+    transform-origin: bottom;
+    transform: translateX(16px) translateY(-110px) translateZ(85px) rotateX(-80deg) ;
+}
+.p5{
+    position: absolute;
+    width: 250px;
+    transform-origin: bottom;
+    transform: scaleX(-1) translateX(50px) translateY(-110px) translateZ(100px) rotateX(-100deg) rotate(0.165turn) translateX(60px) rotateX(50deg);
+}
+
+.p6{
+    position: absolute;
+    width: 250px;
+    transform-origin: bottom;
+    transform: translateX(-50px) translateY(-140px) translateZ(-80px) rotateX(80deg) rotate(-0.165turn) translateX(-50px) rotateX(-50deg);
+}
+
+
+img {
+    transition: transform 5s, width 5s;
+}
+
+div:hover .p1 {
+    position: absolute;
+    width: 250px;
+    transform-origin: bottom;
+    transform: translateX(0px) translateY(-140px) translateZ(-80px) rotateX(-50deg);
+}
+
+div:hover .p2 {
+    position: absolute;
+    width: 250px;
+    transform-origin: bottom left;
+    transform: translateX(90px) translateY(-140px) translateZ(-80px) rotateX(80deg) rotate(0.165turn) translateX(-35px) translateY(-70px) rotateX(-30deg) rotateX(-100deg);
+}
+
+div:hover .p3{
+    position: absolute;
+    width: 250px;
+    transform-origin: bottom left;
+    transform: rotateX(80deg) translateZ(100px) translateX(200px) translateY(-40px) rotate(0.33turn) translateY(-35px) translateX(-60px) rotateX(-30deg) rotateX(-100deg);
+}
+
+div:hover .p4{
+    position: absolute;
+    width: 250px;
+    transform-origin: bottom;
+    transform: translateX(16px) translateY(-110px) translateZ(85px) rotateX(-80deg) rotateX(100deg) ;
+}
+
+div:hover .p5{
+    position: absolute;
+    width: 250px;
+    transform-origin: bottom;
+    transform: scaleX(-1) translateX(50px) translateY(-110px) translateZ(100px) rotateX(-100deg) rotate(0.165turn) translateX(60px) rotateX(120deg) ;
+}
+
+div:hover .p6{
+    position: absolute;
+    width: 250px;
+    transform-origin: bottom;
+    transform: translateX(-50px) translateY(-140px) translateZ(-80px) rotateX(80deg) rotate(-0.165turn) translateX(-50px) rotateX(-50deg) rotateX(-80deg);
+}
+
+div:hover .center{
+    position: absolute;
+    width: 500px;
+}
+
+
+@keyframes rotateAnimation {
+    from {transform: rotateX(0deg)}
+    to {transform: rotateX(360deg)}
+}
+
